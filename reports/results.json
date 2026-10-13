@@ -1,0 +1,91 @@
+{
+  "days": 1941,
+  "revenue_total": 191577546.04138005,
+  "revenue_2015": 42416456.6103778,
+  "growth_2015_vs_2014": 0.12029353606951942,
+  "category_share": {
+    "FOODS": 0.5801,
+    "HOUSEHOLD": 0.2981,
+    "HOBBIES": 0.1217
+  },
+  "concentration_share_for_80pct": 0.3680551000327976,
+  "weekend_index": {
+    "Sunday": 1.214,
+    "Saturday": 1.208,
+    "Friday": 0.99,
+    "Monday": 0.961,
+    "Tuesday": 0.881,
+    "Thursday": 0.875,
+    "Wednesday": 0.871
+  },
+  "snap_uplift": {
+    "CA": 0.104,
+    "TX": 0.1739,
+    "WI": 0.3183
+  },
+  "forecast": {
+    "best_model": "LightGBM",
+    "wape": {
+      "LightGBM": 0.0985,
+      "Random forest": 0.1026,
+      "Weekday profile": 0.1112,
+      "Linear regression": 0.112,
+      "Seasonal naive": 0.1437
+    },
+    "accuracy_best": 0.9015,
+    "error_cut_vs_seasonal_naive": 0.3151,
+    "error_cut_vs_weekday_profile": 0.1147
+  },
+  "inventory": {
+    "service_target": 0.95,
+    "fill_rate_best": 0.9911,
+    "fill_rate_naive": 0.9911,
+    "excess_value_per_day_best": 27401.14,
+    "excess_value_per_day_naive": 44288.35,
+    "excess_cut_vs_naive": 0.3813,
+    "safety_stock_cut_vs_naive": 0.3714
+  },
+  "clearly_inelastic_departments": [
+    "FOODS_3",
+    "HOUSEHOLD_1",
+    "HOUSEHOLD_2"
+  ],
+  "clearly_inelastic_revenue_share": 0.6758,
+  "elasticity": {
+    "HOBBIES_2": {
+      "elasticity": -1.1967,
+      "se": 0.251,
+      "revenue_10pct_off": 0.0209
+    },
+    "FOODS_1": {
+      "elasticity": -0.956,
+      "se": 0.2023,
+      "revenue_10pct_off": -0.0046
+    },
+    "HOBBIES_1": {
+      "elasticity": -0.8727,
+      "se": 0.251,
+      "revenue_10pct_off": -0.0133
+    },
+    "FOODS_2": {
+      "elasticity": -0.8348,
+      "se": 0.1385,
+      "revenue_10pct_off": -0.0173
+    },
+    "FOODS_3": {
+      "elasticity": -0.6791,
+      "se": 0.0776,
+      "revenue_10pct_off": -0.0332
+    },
+    "HOUSEHOLD_1": {
+      "elasticity": -0.4829,
+      "se": 0.1148,
+      "revenue_10pct_off": -0.053
+    },
+    "HOUSEHOLD_2": {
+      "elasticity": 0.0273,
+      "se": 0.1443,
+      "revenue_10pct_off": -0.1026
+    }
+  }
+}

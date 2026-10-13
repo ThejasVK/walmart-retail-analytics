@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "walmart-analytics"
+version = "0.1.0"
+authors = [{name = "Thejas Vijaykumar Koiloorkar"}]
+description = "Sales, demand forecasting, pricing and inventory analytics on Walmart's M5 store-item data"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "duckdb>=1.0",
+  "pandas>=2.0",
+  "numpy>=1.24",
+  "scikit-learn>=1.3",
+  "lightgbm>=4.0",
+  "matplotlib>=3.7",
+  "pyarrow>=14",
+  "tabulate>=0.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff==0.15.11"]
+
+[project.scripts]
+walmart-analytics = "walmart_analytics.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+walmart_analytics = ["sql/*.sql"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
